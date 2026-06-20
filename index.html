@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="lo">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ລະບົບກວດສອບຄວາມຮູ້ກົດຈະລາຈອນ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>ລະບົບກວດສອບຄວາມຮູ້ກົດຈະລາຈອນ</h1>
+        <p class="subtitle">ຄຳຖາມສອບເສັງເອົາໃບຂັບຂີ່ ແຫ່ງສປປ ລາວ</p>
+    </header>
+
+    <div id="home-section">
+        <p class="section-instruction">ກະລຸນາເລືອກພາກສ່ວນຄຳຖາມທີ່ທ່ານຕ້ອງການທົດສອບ:</p>
+        <div class="parts-grid">
+            <div class="part-card" onclick="startQuiz('part1')">
+                <h3>ພາກທີ 1: ຄວາມຮູ້ທົ່ວໄປ ແລະ ກົດລະບຽບ</h3>
+                <p class="subtitle">ຂໍ້ 1 - 20 (ທິດສະດີ)</p>
+            </div>
+            <div class="part-card" onclick="startQuiz('part2')">
+                <h3>ພາກທີ 2: การຈອດ, ໄຟສັນຍານ ແລະ ເຕັກນິກ</h3>
+                <p class="subtitle">ຂໍ້ 21 - 40 (ທິດສະດີ)</p>
+            </div>
+            <div class="part-card" onclick="startQuiz('part3')">
+                <h3>ພາກທີ 3: ພາກປະຕິບັດ ແລະ ຮູບພາບສະຖານະການ</h3>
+                <p class="subtitle">ຂໍ້ 41 - 55 (ມີຮູບພາບປະກອບ)</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="quiz-section" class="quiz-section">
+    <h2 id="part-title"></h2>
+    <form id="quiz-form">
+        <div id="questions-container"></div> 
+        
+        <div class="actions">
+            <button type="button" class="btn btn-secondary" onclick="goHome()">ກັບຄືນໜ້າຫຼັກ</button>
+            <button type="submit" class="btn">ສົ່ງຄຳຕອບ</button>
+        </div>
+    </form>
+    </div>
+
+    <div id="result-section" class="result-section">
+        <h2>ສະຫຼຸບຜົນການທົດສອບ</h2>
+        <p class="subtitle" id="result-part-name"></p>
+        
+        <div class="score-box">
+            <div class="score-card correct">
+                <div>ຕອບຖືກ</div>
+                <div class="score-num" id="correct-score">0</div>
+                <div>ຂໍ້</div>
+            </div>
+            <div class="score-card wrong">
+                <div>ຕອບຜິດ</div>
+                <div class="score-num" id="wrong-score">0</div>
+                <div>ຂໍ້</div>
+            </div>
+        </div>
+
+        <div class="actions" style="justify-content: center; gap: 15px;">
+            <button class="btn" onclick="retryQuiz()">ເລີ່ມຕອບໃໝ່</button>
+            <button class="btn btn-secondary" onclick="goHome()">ກັບຄືນໜ້າຫຼັກ</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
